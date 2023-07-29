@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import Another from "./Pages/Another";
+import Contact from "./Pages/Contact";
+import Homepage from "./Pages/Homepage";
+import { Link, Switch, Routes, Route, HashRouter } from "react-router-dom";
+import styled from "styled-components";
+import Navigation from "./Pages/Nav";
+const NavStyles = styled.nav`
+  ul {
+    margin: 20px 0;
+    padding: 0;
+  }
+
+  li {
+    margin: 0 10px 0 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+  }
+`;
+
+const LinkStyles = styled(Link)`
+  border-radius: 3px;
+  border: 2px solid palevioletred;
+  background: palevioletred;
+  color: white;
+  padding: 0.25em 1em;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-decoration: none;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <HashRouter>
+        <Navigation />
+        <Routes>
+          <Route exact path="/" element={<Homepage />} />
+          <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/another" element={<Another />} />
+        </Routes>
+      </HashRouter>
+    </>
   );
 }
 
