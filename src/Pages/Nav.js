@@ -1,7 +1,14 @@
 import styled from "styled-components";
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "./Assets/logo-png.png";
 const NavStyles = styled.nav`
+  border: red 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   ul {
     margin: 20px 0;
     padding: 0;
@@ -12,6 +19,11 @@ const NavStyles = styled.nav`
     padding: 0;
     list-style: none;
     display: inline-block;
+  }
+
+  .logo {
+    max-height: 15rem;
+    max-width: 60rem;
   }
 `;
 
@@ -28,17 +40,26 @@ const LinkStyles = styled(Link)`
 
 const Navigation = () => {
   return (
-    <ul>
-      <li>
-        <LinkStyles to="/">Home</LinkStyles>
-      </li>
-      <li>
-        <LinkStyles to="/contact">contact</LinkStyles>
-      </li>
-      <li>
-        <LinkStyles to="/another">another</LinkStyles>
-      </li>
-    </ul>
+    <NavStyles>
+      <img src={Logo} className="logo" />
+      <ul>
+        <li>
+          <LinkStyles to="/">Home</LinkStyles>
+        </li>
+        <li>
+          <LinkStyles to="/aboutme">About me</LinkStyles>
+        </li>
+        <li>
+          <LinkStyles to="/projects">Projects</LinkStyles>
+        </li>
+        <li>
+          <LinkStyles to="/myskills">Skills</LinkStyles>
+        </li>
+        <li>
+          <LinkStyles to="/myworkexperience">Work Experience</LinkStyles>
+        </li>
+      </ul>
+    </NavStyles>
   );
 };
 export default Navigation;
