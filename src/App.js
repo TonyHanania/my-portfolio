@@ -3,7 +3,7 @@ import AboutMe from "./Pages/AboutMe";
 import Homepage from "./Pages/Homepage";
 import Skills from "./Pages/Skills";
 import WorkExperience from "./Pages/WorkExperience";
-
+import GlobalStyles from "./GlobalStyles";
 import { Link, Switch, Routes, Route, HashRouter } from "react-router-dom";
 import styled from "styled-components";
 import Navigation from "./Pages/Nav";
@@ -36,6 +36,7 @@ function App() {
   return (
     <>
       <HashRouter>
+        <GlobalStyles />
         <Navigation />
         <Routes>
           <Route exact path="/" element={<Homepage />} />
