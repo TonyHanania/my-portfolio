@@ -5,7 +5,7 @@ max-width: 1200px;
   margin: 0 auto;
   padding: 0;
   }
-  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
   html, body, div, span, applet, object, iframe,
     blockquote, pre,
     a, abbr, acronym, address, big, cite, code,
@@ -25,6 +25,7 @@ max-width: 1200px;
         /* font-size: 65%; */
 
         /* font: inherit; */
+        font-family: kalam;
         vertical-align: baseline;
     }
   html{

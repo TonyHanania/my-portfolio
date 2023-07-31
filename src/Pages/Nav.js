@@ -17,10 +17,8 @@ const NavStyles = styled.nav`
     flex-wrap: wrap;
 
     @media (max-width: 600px) {
-      flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      height: 200px;
     }
   }
 
@@ -40,7 +38,7 @@ const NavStyles = styled.nav`
 const LinkStyles = styled(Link)`
   text-decoration: none;
   color: black;
-  padding: 0.25em 1em;
+  padding: 0.25rem 1rem;
   font-weight: bold;
   font-size: 1.2em;
   border-radius: 3px;
@@ -60,6 +58,9 @@ const LinkStyles = styled(Link)`
   :hover {
     background: #e1a412;
     color: white;
+  }
+  @media (max-width: 600px) {
+    padding: 0.25rem;
   }
 `;
 
